@@ -1,0 +1,39 @@
+                           table
+						   
+create table attendance(ID number not null,name varchar2(20),present number);
+                          
+						  sequence
+						  
+CREATE SEQUENCE attendance_seq
+ START WITH     1000
+ INCREMENT BY   1
+ NOCACHE
+ NOCYCLE;
+                        
+						  trigger
+
+CREATE OR REPLACE TRIGGER attendance_trigger
+BEFORE INSERT
+ON attendance
+REFERENCING NEW AS NEW
+FOR EACH ROW
+BEGIN
+SELECT attendance_seq.nextval INTO :NEW.ID FROM dual;
+END;
+/
+
+                         dropping
+
+drop table attendance;
+drop sequence attendance_seq;
+drop trigger attendance_trigger;
+
+                      sql operations
+					  
+select * from attendance ORDER by present DESC;		
+delete from attendance where present=1;			  
+
+
+
+
+           

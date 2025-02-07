@@ -1,0 +1,1 @@
+create table attendance(sname varchar2(20),id varchar2(10),days number(2),t_days number(2));

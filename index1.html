@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+     
+        <meta charset="UTF-8">
+		<title>Diaton Institute of Medical Sciences</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="script/bootstrap/css/bootstrap.css">
+		<script src="script/bootstrap/js/jquery.js"></script>
+		<script src="script/bootstrap/js/bootstrap.js"></script>
+
+
+  <script>
+  
+	function fun(){
+		var a=document.getElementById("ID").value;
+		var b=document.getElementById("pass").value;
+ var id="john";
+ var pw="john";
+            if(a=="" && b=="")
+			{
+			alert("Enter both Customerid and password");
+			window.parent.frames["error"].document.getElementById("div").innerHTML="<font face='arial' size='4' color='green' style='cursor:hand' onMouseOver='f1()'>Enter both Customerid and password</font>";
+						}
+
+			else if(a==id &&  b==pw)
+			{
+			window.open("DIMS.jsp","_parent");
+			alert("Processing......");
+		
+		}
+
+		}
+  </script>
+  <style>
+      #login {        
+          position: fixed;
+        width: 18%; /* Set your desired with */
+        z-index: 2; /* Make sure its above other items. */
+        top: 90%;
+        left: 10%;
+        margin-top: -10%; /* Changes with height. */
+        margin-left: -10%; /* Your width divided by 2. */
+
+        /* You will not need the below, its only for styling   purposes. */
+        padding: 10px;
+        border: 1px solid #555555;
+        background-color: rgba(0,0,0,.1);
+        border-radius: 10px;
+        text-align: center;
+           }
+      #home {
+    /* The image used */
+    background-image: url("css/img/REUBEE3.jpg");
+
+   
+    min-height: 600px; 
+
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo img {
+  float: left;
+  width: 150px;
+  height: 150px;
+ 
+}
+#theme { background:rgba(0,0,0,.1);
+  position: relative;
+  top: 0px;
+  left: 150px;
+  width:1200px;
+ }
+#theme h1,h1 {font-size: 50px;
+	font-family: 'Futura';
+	color: #fff;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+	text-align: center);
+}
+#theme h3 {color:rgb(230,190,138);
+}
+#theme h4  {color:rgb(0,200,250);
+}
+
+  </style>
+ </head>
+ <body>
+     <div class="row">
+<div id="home" class="col-md-12">
+<div id="logo">
+ <img src="css/img/logo.png" alt="logo" />
+</div>
+<div id="theme">
+<hr>
+<center><h1><strong>Diaton Institute of Medical Sciences </strong></h1></center>
+</div>   
+ <div id="login">
+ <form>
+     <strong><h1>LOGIN</h1></strong>
+<input type="text" class="form-control" id="ID" size="27" VALUE ="" placeholder="ENTER UR ID"/>
+<input type="password" class="form-control" id="pass" size="27" maxlength="9" VALUE ="" placeholder="ENTER UR PASSWORD"/>
+<button type="button" class="btn btn-outline-success" onclick="fun();">LOGIN</button>
+</form>
+</div>
+</div>
+ </div>         
+ </body>
+ 
+</html>
